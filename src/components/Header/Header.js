@@ -12,7 +12,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Logo />
+        <Spacer>
+          <Logo />
+        </Spacer>
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -21,6 +23,7 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
+        <Spacer />
       </MainHeader>
     </header>
   );
@@ -28,16 +31,21 @@ const Header = () => {
 
 const MainHeader = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   padding: 23px 32px;
+  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 `;
 
+// This styled component helps us distribute space equally throughout our header component and center the nav bar.
+const Spacer = styled.div`
+  flex: 1;
+`
+
 const Nav = styled.nav`
   display: flex;
-  justify-content: center;
-  flex: 4;
   gap: 48px;
+  margin: 0 48px;
 `;
 
 const NavLink = styled.a`

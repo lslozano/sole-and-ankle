@@ -27,7 +27,9 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: 0.875rem;
-  padding: 10px 20px;
+  height: 40px;
+  padding: 0 32px;
+  gap: 24px;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
 `;
@@ -41,7 +43,6 @@ const HelpLink = styled.a`
   color: inherit;
   text-decoration: none;
   outline-offset: 2px;
-  padding: 0 20px;
 
   &:not(:focus-visible) {
     outline: none;
